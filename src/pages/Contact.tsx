@@ -1,18 +1,20 @@
 
-import { Typography, Button, Space } from 'antd';
-import { WhatsAppOutlined, MailOutlined } from '@ant-design/icons';
+import { Typography, Button,  FloatButton } from 'antd';
+import { WhatsAppOutlined } from '@ant-design/icons';
 
 const Contact = () => (
   <div>
-    <Typography.Title level={2}>Entre em Contato</Typography.Title>
-    <Space direction="vertical" size="large">
-      <Button type="primary" icon={<WhatsAppOutlined />} size="large" href="https://wa.me/5599999999999" target="_blank">
-        WhatsApp
-      </Button>
-      <Button icon={<MailOutlined />} size="large" href="mailto:atendimento@fullautomate.com">
-        atendimento@fullautomate.com
-      </Button>
-    </Space>
+  <section id="contato" style={{ textAlign: 'center' }}>
+        <Typography.Title level={2}>Fale Conosco</Typography.Title>
+        <Typography.Paragraph>
+          Entre em contato pelo WhatsApp ou email, e vamos começar seu projeto!
+        </Typography.Paragraph>
+
+         <FloatButton icon={<WhatsAppOutlined />} type="primary" href="https://wa.me/5511981007578" target="_blank" style={{ insetInlineEnd: 24 }} />
+        <Button type="primary" href="https://wa.me/5511981007578" target="_blank">WhatsApp</Button>
+        <br /><br />
+        <Button type="text" href="mailto:atendimento@fullautomate.com">fullautomatewebsolutions@gmail.com</Button>
+      </section>
   </div>
 );
 
