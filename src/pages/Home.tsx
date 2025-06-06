@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Typography, Button } from 'antd';
 // import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';

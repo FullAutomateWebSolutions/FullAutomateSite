@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Typography, Card, Row, Col } from 'antd';
 
 const mockProjects = [

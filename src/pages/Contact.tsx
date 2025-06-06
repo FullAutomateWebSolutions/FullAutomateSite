@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Typography, Button, Space } from 'antd';
 import { WhatsAppOutlined, MailOutlined } from '@ant-design/icons';
 
