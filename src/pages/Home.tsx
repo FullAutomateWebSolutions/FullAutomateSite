@@ -1,5 +1,4 @@
 import { Typography, Button, Row, Col } from 'antd';
-import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'; // Certifique-se de importar o logo corretamente
 
 const Home = () => (
@@ -28,9 +27,10 @@ const Home = () => (
         <Typography.Paragraph style={{ fontSize: 18, lineHeight: 1.6 }}>
           Desenvolvemos software, rápidos e alinhados com a identidade da sua empresa.
         </Typography.Paragraph>
-        <Link to="/contato">
-          <Button type="primary" size="large">Solicitar Orçamento</Button>
-        </Link>
+        {/* <Link to="#contato"> */}
+        <a href="#contato"><Button type="primary" size="large">Solicitar Orçamento</Button></a>
+          
+        {/* </Link> */}
       </Col>
     </Row>
   </section>

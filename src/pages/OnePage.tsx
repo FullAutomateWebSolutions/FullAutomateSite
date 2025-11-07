@@ -1,7 +1,7 @@
 
 import Services from "./Services";
 import Contact from "./Contact";
-// import CarouselInicial from "./CarouselInicial";
+import CarouselInicial from "./CarouselInicial";
 import Home from "./Home";
 import Tecnologias from "./Tecnologias";
 import { Sobre } from "./Sobre";
@@ -12,7 +12,7 @@ const OnePage = () => {
   return (
     <div>
       <Home/>
-      {/* <CarouselInicial/> */}
+      <CarouselInicial/>
       <Services />
       <Tecnologias/>
       

@@ -2,6 +2,7 @@
 import { Card, Row, Col, Typography, Button } from "antd";
 import { GithubOutlined } from "@ant-design/icons";
 import project from '../assets/project2.png';
+import projectG from '../assets/projectG.jpg';
 const {  Paragraph } = Typography;
 
 export function PortfolioSection() {
@@ -43,14 +44,35 @@ export function PortfolioSection() {
             <Paragraph>
               Site institucional moderno com Vite + Ant Design, responsivo e integrado ao Firebase Hosting.
             </Paragraph>
-            <Button
+            {/* <Button
               type="link"
               icon={<GithubOutlined />}
               href="https://github.com/FullAutomateWebSolutions"
               target="_blank"
             >
               Ver no GitHub
-            </Button>
+            </Button> */}
+          </Card>
+        </Col>
+
+         <Col xs={24} md={8}>
+          <Card
+            title="Portal CRUD e integrações personalizadas"
+            hoverable
+            cover={<img alt="Portal" src={projectG} />}
+          >
+            <Paragraph>
+              Plataforma com componentes avançados e sistema de gestao de acessos RBAC (Role-Based Access Control)
+               login, tabelas, filtros, CRUD e integrações personalizadas
+            </Paragraph>
+            {/* <Button
+              type="link"
+              icon={<GithubOutlined />}
+              href="https://github.com/FullAutomateWebSolutions"
+              target="_blank"
+            >
+              Ver no GitHub
+            </Button> */}
           </Card>
         </Col>
       </Row>

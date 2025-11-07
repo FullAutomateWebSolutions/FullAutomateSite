@@ -1,70 +1,95 @@
-import { Carousel } from "antd";
+import { Carousel, Typography } from "antd";
+import { motion } from "framer-motion";
 
-// import Home from "./Home";
+const { Title, Paragraph } = Typography;
 
-// const wrapperStyle: React.CSSProperties = {
-//   width: '100%',
-//   maxWidth: '1200px', // largura máxima
-//   margin: '0 auto 60px auto',
-//   borderRadius: '12px',
-//   overflow: 'hidden',
-//   boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
-// };
-
-// const contentStyle: React.CSSProperties = {
-//   height: "280px",
-//   width: "100%",
-//   display: 'flex',
-//   justifyContent: 'center',
-//   alignItems: 'center',
-// };
-
-// const imageStyle: React.CSSProperties = {
-//   width: '100%',
-//   height: '100%',
-//   objectFit: 'cover',
-// };
-
-  //  <div style={contentStyle2}>
-  //         <img src={a} alt="Slide 3" style={imageStyle} />
-  //       </div>
-
-const contentStyle2: React.CSSProperties = {
-  height: "300px",
-  // color: "#fff",
-  lineHeight: "300px",
-  // textAlign: "center",
-  //  background: 'linear-gradient(to right, rgba(42, 157, 143, 0.08), rgba(11, 65, 92, 0.08))',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-};
-
+const slides = [
+  {
+    title: "Customização de Plataforma Existente",
+    desc: "Adaptação de telas, criação de módulos e melhorias visuais sob medida",
+    img: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1200&q=80",
+  },
+  
+  {
+    title: "Painel Administrativo / Dashboard ",
+    desc: "Inclui: login, tabelas, filtros, CRUD e integrações personalizadas",
+    img: "https://full-automate-site.vercel.app/assets/project2-Bb5Yszhv.png",
+  },
+  {
+    title: "Site Institucional ",
+    desc: "Inclui: página inicial, sobre, serviços e contato + hospedagem básica",
+     img: "https://img.myloview.com.br/posters/hud-para-o-seu-fundo-azul-application-dashboard-space-o-design-do-futuro-700-106707713.jpg",
+  }
+  
+];
 
 const CarouselInicial = () => {
   return (
-    // <div style={wrapperStyle}>
-      <Carousel autoplay autoplaySpeed={1000} dots>
-        {/* <div style={contentStyle2}> */}
-          {/* <Home/> */}
-        {/* </div> */}
-        <div style={contentStyle2}>
-          <h3 >Site Institucional — a partir de R$ 750</h3>
-            <h4>Inclui: página inicial, sobre, serviços e contato + hospedagem básica</h4>
-        </div>
-         <div style={contentStyle2}>
-          <h3 >Painel Administrativo / Dashboard — a partir de R$ 1.200</h3>
-            <h4>Inclui: login, tabelas, filtros, CRUD e integrações personalizadas</h4>
+    <div
+      style={{
+        width: "100%",
+        maxWidth: "1900px",
+        margin: "0 auto 60px",
+        // borderRadius: "16px",
+        marginBottom: 30,
+        marginTop: 30,
+        overflow: "hidden",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+      }}
+    >
+      <Carousel autoplay autoplaySpeed={5000} effect="fade" dots>
+        {slides.map((slide, index) => (
+          <div key={index}>
+            <div
+              style={{
+                height: "380px",
+                backgroundImage: `url(${slide.img})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                position: "relative",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* sobreposição escura para destacar o texto */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  background: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6))",
+                }}
+              />
 
-        </div>
-          <div style={contentStyle2}>
-          <h3 >Customização de Plataforma Existente — sob orçamento</h3>
-            <h4>Adaptação de telas, criação de módulos e melhorias visuais</h4>
-
-        </div>
-     
+              {/* Texto centralizado */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                style={{
+                  position: "relative",
+                  zIndex: 2,
+                  textAlign: "center",
+                  color: "#fff",
+                  padding: "0 20px",
+                  maxWidth: "800px",
+                }}
+              >
+                <Title level={2} style={{ color: "#fff", marginBottom: 10 }}>
+                  {slide.title}
+                </Title>
+                <Paragraph style={{ color: "rgba(255,255,255,0.9)", fontSize: "18px" }}>
+                  {slide.desc}
+                </Paragraph>
+              </motion.div>
+            </div>
+          </div>
+        ))}
       </Carousel>
-    // </div>
+    </div>
   );
 };
 
