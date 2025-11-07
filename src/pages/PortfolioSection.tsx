@@ -62,7 +62,7 @@ export function PortfolioSection() {
             cover={<img alt="Portal" src={projectG} />}
           >
             <Paragraph>
-              Plataforma com componentes avançados e sistema de gestao de acessos RBAC (Role-Based Access Control)
+              Plataforma com componentes avançados e sistema de gestão de acessos RBAC (Role-Based Access Control)
                login, tabelas, filtros, CRUD e integrações personalizadas
             </Paragraph>
             {/* <Button
