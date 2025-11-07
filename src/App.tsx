@@ -1,7 +1,7 @@
 import { Layout } from "antd";
 import OnePage from "./pages/OnePage";
 import HeaderChildren from "./components/Header";
-const { Content, Header, Footer } = Layout;
+const { Content, Header,  Footer } = Layout;
 const App = () => {
   // const {
   //   token: { colorBgContainer },

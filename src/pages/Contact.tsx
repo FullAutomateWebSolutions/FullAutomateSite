@@ -1,6 +1,6 @@
 
 import { Typography, Button,  FloatButton, Space } from 'antd';
-import { InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons';
+import { InstagramOutlined, LinkedinFilled, WhatsAppOutlined } from '@ant-design/icons';
 
 const Contact = () => (
   <div>
@@ -15,6 +15,7 @@ const Contact = () => (
          <Space>
         <Button  type="primary" href="https://wa.me/5511981007578" target="_blank"><WhatsAppOutlined/></Button>
         <Button type="primary" href="https://www.instagram.com/fullautomatewebsolutions/" target="_blank"><InstagramOutlined /></Button>
+        <Button type="primary" href="https://linkedin.com/in/alex-sandro-a-4931a1167" target="_blank"><LinkedinFilled /></Button>
          </Space>
         
         <br /><br />

@@ -1,9 +1,11 @@
 
-// import Portfolio from "./Portfolio";
 import Services from "./Services";
 import Contact from "./Contact";
 // import CarouselInicial from "./CarouselInicial";
 import Home from "./Home";
+import Tecnologias from "./Tecnologias";
+import { Sobre } from "./Sobre";
+import { PortfolioSection } from "./PortfolioSection";
 
 
 const OnePage = () => {
@@ -12,8 +14,13 @@ const OnePage = () => {
       <Home/>
       {/* <CarouselInicial/> */}
       <Services />
-      {/* <Portfolio /> */}
+      <Tecnologias/>
+      
+      <PortfolioSection/>
+      
+      <Sobre/>
       <Contact />
+
     </div>
   );
 };

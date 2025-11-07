@@ -1,15 +1,15 @@
 import { Carousel } from "antd";
-import a from '../assets/1.png';
-import Home from "./Home";
 
-const wrapperStyle: React.CSSProperties = {
-  width: '100%',
-  maxWidth: '1200px', // largura máxima
-  margin: '0 auto 60px auto',
-  borderRadius: '12px',
-  overflow: 'hidden',
-  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
-};
+// import Home from "./Home";
+
+// const wrapperStyle: React.CSSProperties = {
+//   width: '100%',
+//   maxWidth: '1200px', // largura máxima
+//   margin: '0 auto 60px auto',
+//   borderRadius: '12px',
+//   overflow: 'hidden',
+//   boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
+// };
 
 // const contentStyle: React.CSSProperties = {
 //   height: "280px",
@@ -34,7 +34,7 @@ const contentStyle2: React.CSSProperties = {
   // color: "#fff",
   lineHeight: "300px",
   // textAlign: "center",
-  background: "#364d79",
+  //  background: 'linear-gradient(to right, rgba(42, 157, 143, 0.08), rgba(11, 65, 92, 0.08))',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -46,10 +46,21 @@ const CarouselInicial = () => {
     // <div style={wrapperStyle}>
       <Carousel autoplay autoplaySpeed={1000} dots>
         {/* <div style={contentStyle2}> */}
-          <Home/>
+          {/* <Home/> */}
         {/* </div> */}
-        <div >
-          <h3 style={contentStyle2}>12312123123</h3>
+        <div style={contentStyle2}>
+          <h3 >Site Institucional — a partir de R$ 750</h3>
+            <h4>Inclui: página inicial, sobre, serviços e contato + hospedagem básica</h4>
+        </div>
+         <div style={contentStyle2}>
+          <h3 >Painel Administrativo / Dashboard — a partir de R$ 1.200</h3>
+            <h4>Inclui: login, tabelas, filtros, CRUD e integrações personalizadas</h4>
+
+        </div>
+          <div style={contentStyle2}>
+          <h3 >Customização de Plataforma Existente — sob orçamento</h3>
+            <h4>Adaptação de telas, criação de módulos e melhorias visuais</h4>
+
         </div>
      
       </Carousel>

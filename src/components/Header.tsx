@@ -1,7 +1,7 @@
 import  { useState } from 'react';
 import {  Menu, Drawer, Button, Grid } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo.png';
 
 const { useBreakpoint } = Grid;
 
@@ -20,7 +20,7 @@ const HeaderChildren = () => {
   return (
     < >
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <img src={logo} alt="Logo" style={{ height: 40, marginRight: 12 }} />
+        <img src="https://http2.mlstatic.com/D_698574-MLA88582498013_072025-M.webp" alt="Logo" style={{ height: 40, marginRight: 12 }} />
         <h2 style={{ margin: 0 }}>Full Automate</h2>
       </div>
       {isMobile ? (
